@@ -18,6 +18,10 @@ const overrides = {
 	config: {
     cssVarPrefix: ""
   },
+	fonts: {
+    heading: 'Merriweather, Roboto, sans-serif',
+    body: 'Roboto, sans-serif',
+  },
   styles,
   components: {
     Heading,
