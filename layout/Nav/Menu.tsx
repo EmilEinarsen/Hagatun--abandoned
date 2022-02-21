@@ -24,7 +24,7 @@ export const Item: React.FC<HeadingProps & { isDrawer?: boolean }> = ({ isDrawer
  */
 export const Menu = () => 
 	<>
-		<Link href="/" aria-label="Go to homepage" exact><LogoIcon fontSize="2xl" /></Link>
+		<Link href="/" aria-label="Go to homepage" exact><LogoIcon fontSize="7xl" color="#C3A94D" /></Link>
 		<Box as="nav" className="nav" aria-label="Main">
 			<List className="nav__list" orientation="horizontal" alignItems="center">
 				<Item className="d-not-mobile" as={props => <Link {...props} href="/news" exact>NYHETER</Link>} />

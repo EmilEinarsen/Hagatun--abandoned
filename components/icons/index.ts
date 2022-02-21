@@ -4,6 +4,10 @@ import { HamburgerIcon } from './HamburgerIcon'
 import { LogoIcon } from './LogoIcon'
 import { SwedishFlagIcon } from './flags/SwedishFlagIcon'
 import { ExternalLinkIcon } from './ExternalLinkIcon'
+import { AdressIcon } from './AdressIcon'
+import { MailIcon } from './MailIcon'
+import { SearchIcon } from './SearchIcon'
+import { PhoneIcon } from './PhoneIcon'
 
 /*
 	Qol to easily import all icons
@@ -15,6 +19,10 @@ export const Icon = {
 	Close: CloseIcon,
 	SwedishFlag: SwedishFlagIcon,
 	ExternalLink: ExternalLinkIcon,
+	Adress: AdressIcon,
+	Mail: MailIcon,
+	Search: SearchIcon,
+	Phone: PhoneIcon,
 }
 /*
 	All icons goes here

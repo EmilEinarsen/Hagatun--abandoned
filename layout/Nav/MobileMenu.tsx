@@ -38,7 +38,7 @@ const MobileMenu = () => {
 				use this to style navigation since FocusLock doesn't have the props className or style 
 			*/}
 			<FocusLock finalFocusRef={btnRef} isDisabled={!isOpen}>
-				<Link href="/" aria-label="Go to homepage" exact onClick={onClose}><LogoIcon fontSize="2xl" /></Link>
+				<Link href="/" aria-label="Go to homepage" exact onClick={onClose}><LogoIcon fontSize="6xl" color="#C3A94D" /></Link>
 				<Box as="nav" className="nav" aria-label="Main">
 						<List className="nav__list" orientation="horizontal" alignItems="center">
 							<IconButton
