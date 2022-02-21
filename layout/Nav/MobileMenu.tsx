@@ -64,8 +64,10 @@ const MobileMenu = () => {
 								ref={listRef}
 								id="mobileMenu"
 							>
-								<Item as={props => <Link {...props} href="/" exact>Home</Link>} isDrawer onClick={onClose} />
-								<Item as={props => <Link {...props} href="/example" exact>Example</Link>} isDrawer onClick={onClose} />
+								<Item as={props => <Link {...props} href="/news" exact>NYHETER</Link>} isDrawer onClick={onClose} />
+								<Item as={props => <Link {...props} href="/about" exact>OM OSS</Link>} isDrawer onClick={onClose} />
+								<Item as={props => <Link {...props} href="/contact" exact>KONTAKTA</Link>} isDrawer onClick={onClose} />
+								<Item as={props => <Link {...props} href="/services" exact>TJÄNSTER</Link>} isDrawer onClick={onClose} />
 							</VStack>
 							<Portal containerRef={headerRef}>
 								{/* Needed since the portal breaks the outer Fade effect */}
