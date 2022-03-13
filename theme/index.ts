@@ -12,6 +12,7 @@ import Heading from "./components/heading"
 import Text from "./components/text"
 import Divider from "./components/divider"
 import Link from "./components/link"
+import Button from "./components/button"
 
 
 const overrides = {
@@ -28,7 +29,13 @@ const overrides = {
 		Text,
 		Divider,
 		Link,
+		Button,
   },
+	colors: {
+		primary: {
+			600: '#5071CB'
+		}
+	}
 } as ThemeOverride
 
 

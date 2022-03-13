@@ -27,12 +27,12 @@ export const Menu = () =>
 			<Heading.H6 marginTop={0} marginLeft={2}>HAGATUN REVISION</Heading.H6>
 		</Link>
 		<Box as="nav" className="nav" aria-label="Main">
-			<List className="nav__list" orientation="horizontal" alignItems="center">
+			<List className="nav__list" orientation="horizontal" alignItems="center" gridGap="5rem">
 				<Item className="d-not-mobile" as={props => <Link {...props} href="/news" exact>NYHETER</Link>} />
 				<Item className="d-not-mobile" as={props => <Link {...props} href="/about" exact>OM OSS</Link>} />
 				<Item className="d-not-mobile" as={props => <Link {...props} href="/contact" exact>KONTAKTA</Link>} />
 				<Item className="d-not-mobile" as={props => <Link {...props} href="/services" exact>TJÄNSTER</Link>} />
-				<Item className="d-not-mobile" as={props => <Button {...props} variant="outline">SÖK</Button>} />
+				<Button variant="outline" colorScheme="primary" padding="1.5rem 3rem">SÖK</Button>
 				<IconButton
 					size="lg"
 					aria-label="Open the menu"
