@@ -58,6 +58,7 @@ $border-width: 2px;
 .header__container {
 	background: var(--colors-white);
 	border-bottom: $border-width solid var(--colors-gray-100);
+	padding: unset;
 }
 
 .footer__container {
