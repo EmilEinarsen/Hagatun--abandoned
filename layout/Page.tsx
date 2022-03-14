@@ -3,7 +3,7 @@ import React from "react"
 import { usePrefersReducedMotion } from "@chakra-ui/react"
 import { TransitionLayout, TransitionLayoutProps } from "./TransitionLayout"
 
-export const Page: React.FC<TransitionLayoutProps> = ({ children, ...props }) => {
+export const Page = ({ children, ...props }: React.PropsWithChildren<TransitionLayoutProps>) => {
 	const shouldReduceMotion = usePrefersReducedMotion()
 	
 	return !shouldReduceMotion ? (

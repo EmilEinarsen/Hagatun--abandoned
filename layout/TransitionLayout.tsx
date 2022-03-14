@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useCallback } from 'react'
+import React, { useState, useEffect, useMemo, useCallback } from 'react'
 
 import { useMount } from 'hooks/useMount'
 import { useBoolean } from '@chakra-ui/hooks'
@@ -11,7 +11,6 @@ export interface ComponentProps {
 }
 
 export interface TransitionLayoutProps extends ComponentProps {
-	children?: React.ReactNode
 	childKey: string
 	type?: React.CSSProperties['transitionTimingFunction']
 	duration?: React.CSSProperties['transitionDuration']
@@ -41,7 +40,7 @@ export function TransitionLayout({
 	exit,
 	as: Component = 'div',
 	...props
-}: TransitionLayoutProps) {
+}: React.PropsWithChildren<TransitionLayoutProps>) {
 	const { show, hide } = useMemo(() => ({
 		show: { ...animate, transitionTimingFunction, transitionDuration },
 		hide: { ...exit, transitionTimingFunction, transitionDuration },

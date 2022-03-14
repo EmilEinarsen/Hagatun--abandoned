@@ -45,3 +45,16 @@ article ul[role=list] {
 article h2 {
 	border-bottom-width: 1px;
 }
+
+/* slightly transparent fallback */
+.frosty-background {
+  background-color: rgba(255,255,255, 0.9);
+}
+
+/* if backdrop support: very transparent and blurred */
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .frosty-background {
+    backdrop-filter: blur(30px);
+    background-color: rgba(255,255,255, 0.5);
+  }
+}

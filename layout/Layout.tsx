@@ -5,8 +5,13 @@ import { Link } from 'components/core/Link'
 import { SwedishFlagIcon } from 'components/icons'
 import { Text } from "components/core/Text"
 import { Page } from 'layout/Page'
+import React from 'react'
 
-const Layout: React.FC<{ childKey: string }> = ({ children, childKey }) =>
+interface LayoutProps { 
+	childKey: string 
+}
+
+const Layout = ({ children, childKey }: React.PropsWithChildren<LayoutProps>) =>
 	<div className="wrapper">
 		<div className="page">
 			<header className="header" id="header">

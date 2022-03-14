@@ -1,18 +1,19 @@
 import { useRouter } from 'next/router';
 import NextLink from 'next/link';
 import { Link as StyledLink, LinkProps as StyledLinkProps, VisuallyHidden } from '@chakra-ui/react';
+import React from 'react';
 
 export interface LinkProps extends Omit<StyledLinkProps, 'href'> {
 	href?: string
 	exact?: boolean
 }
 
-export const Link: React.FC<LinkProps> = ({ 
+export const Link = ({ 
 	href = '',
 	exact,
 	children,
 	...props
-}) => {
+}: React.PropsWithChildren<LinkProps>) => {
 	const { pathname } = useRouter();
 	const isActive = exact ? pathname === href : pathname.startsWith(href);
 	

@@ -1,4 +1,7 @@
 const text: StyleConfig = {
+	baseStyle: {
+		color: '#424B61'
+	},
 	variants: {
 		subtitle: {
 			fontSize: 'xl', 
@@ -8,6 +11,11 @@ const text: StyleConfig = {
 			fontSize: 'lg', 
 			fontWeight: 'normal', 
 			marginTop: '1.5rem', 
+			lineHeight: '1.75rem'
+		},
+		body2: {
+			fontSize: 'md', 
+			fontWeight: 'normal',
 			lineHeight: '1.75rem'
 		},
 		caption: {
