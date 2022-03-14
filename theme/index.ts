@@ -13,6 +13,8 @@ import Text from "./components/text"
 import Divider from "./components/divider"
 import Link from "./components/link"
 import Button from "./components/button"
+import colors from "./foundations/colors"
+import radii from "./foundations/radii"
 
 
 const overrides = {
@@ -31,11 +33,8 @@ const overrides = {
 		Link,
 		Button,
   },
-	colors: {
-		primary: {
-			600: '#5071CB'
-		}
-	}
+	colors,
+	radii
 } as ThemeOverride
 
 

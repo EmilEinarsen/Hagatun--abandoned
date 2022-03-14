@@ -2,7 +2,8 @@ const button: StyleConfig = {
 	variants: {
 		outline: {
 			borderWidth: 2,
-			borderRadius: '1rem'
+			letterSpacing: '.15rem',
+			fontWeight: 'bolder'
 		}
 	},
 } as const

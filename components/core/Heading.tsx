@@ -7,6 +7,7 @@ interface Compound {
 	H4: React.ComponentType<Omit<HeadingProps, 'as' | 'variant'>> 
 	H5: React.ComponentType<Omit<HeadingProps, 'as' | 'variant'>> 
 	H6: React.ComponentType<Omit<HeadingProps, 'as' | 'variant'>> 
+	Brand: React.ComponentType<HeadingProps> 
 }
 
 export const Heading = Object.assign(ChakraHeading, {
@@ -16,4 +17,5 @@ export const Heading = Object.assign(ChakraHeading, {
 	H4: props => <ChakraHeading as="h4" variant="h4" {...props} />,
 	H5: props => <ChakraHeading as="h5" variant="h5" {...props} />,
 	H6: props => <ChakraHeading as="h6" variant="h6" {...props} />,
+	Brand: props => <ChakraHeading as="p" variant="h6" fontSize="md" marginTop={0} {...props} />,
 } as Compound)

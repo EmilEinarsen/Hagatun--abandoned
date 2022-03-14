@@ -11,6 +11,7 @@ export const Item: React.FC<TextProps & { isDrawer?: boolean }> = ({ isDrawer, .
 		<Text
 			{...props}
 			{...isDrawer?{display:'flex', justifyContent: 'center'}:null}
+			fontSize="md"
 		/>
 	</ListItem>
 
@@ -24,20 +25,21 @@ export const Menu = () =>
 	<>
 		<Link href="/" aria-label="Go to homepage" exact display="flex" alignItems="center">
 			<LogoIcon fontSize="7xl" color="#C3A94D" />
-			<Heading.H6 marginTop={0} marginLeft={2}>HAGATUN REVISION</Heading.H6>
+			<Heading.Brand marginLeft={2}>HAGATUN REVISION</Heading.Brand>
 		</Link>
-		<Box as="nav" className="nav" aria-label="Main">
-			<List className="nav__list" orientation="horizontal" alignItems="center" gridGap="5rem">
+		<Box as="nav" className="nav" aria-label="Main" width="100%" maxW="700px">
+			<List className="nav__list" orientation="horizontal" alignItems="center" width="100%" justifyContent="space-between">
 				<Item className="d-not-mobile" as={props => <Link {...props} href="/news" exact>NYHETER</Link>} />
 				<Item className="d-not-mobile" as={props => <Link {...props} href="/about" exact>OM OSS</Link>} />
 				<Item className="d-not-mobile" as={props => <Link {...props} href="/contact" exact>KONTAKTA</Link>} />
 				<Item className="d-not-mobile" as={props => <Link {...props} href="/services" exact>TJÄNSTER</Link>} />
-				<Button variant="outline" colorScheme="primary" padding="1.5rem 3rem">SÖK</Button>
+				<Button className="d-not-mobile" variant="outline" colorScheme="primary" padding="1.5rem 3rem" fontSize="md">SÖK</Button>
 				<IconButton
 					size="lg"
 					aria-label="Open the menu"
 					aria-controls="mobileMenu"
 					className="d-only-mobile"
+					borderRadius="base"
 				>
 					<HamburgerIcon aria-hidden />
 				</IconButton>
