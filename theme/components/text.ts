@@ -1,11 +1,11 @@
 const text: StyleConfig = {
 	baseStyle: {
-		color: '#424B61'
+		color: 'greyViolet.600'
 	},
 	variants: {
 		subtitle: {
 			fontSize: 'xl', 
-			fontWeight: 'medium'
+			fontWeight: 'normal'
 		},
 		body: {
 			fontSize: 'lg', 
@@ -19,11 +19,11 @@ const text: StyleConfig = {
 			lineHeight: '1.75rem'
 		},
 		caption: {
-			fontSize: 'md', 
+			fontSize: '.875rem', 
 			fontWeight: 'medium', 
 			textTransform: 'uppercase', 
 			color: 'gray.700', 
-			letterSpacing: '.1rem', 
+			letterSpacing: '.15rem', 
 			marginTop: '1rem'
 		},
 		blockquote: {

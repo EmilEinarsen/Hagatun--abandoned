@@ -28,11 +28,11 @@ const Home: Page = () => {
 					height: '100%',
 					display: 'flex',
 					flexDirection:'column',
-					justifyContent: 'space-around'
+					justifyContent: 'space-between'
 				}}
 			>
 				<Box maxW={470}>
-					<Heading.H1>
+					<Heading.H1 mt="2rem">
 						Lorem ipsum dolor sit amet.
 					</Heading.H1>
 					<Text.Subtitle mt="2rem">
@@ -41,7 +41,7 @@ const Home: Page = () => {
 				</Box>
 				<Box>
 					<FrostBox p=".5rem 1.5rem" w="min-content" borderRadius="1.25rem 1.25rem 0 0">
-						<Text.Caption mt={0} whiteSpace="nowrap" fontWeight="bold">
+						<Text.Caption mt={0} whiteSpace="nowrap">
 							KONTAKTA OSS
 						</Text.Caption>
 					</FrostBox>
@@ -49,7 +49,7 @@ const Home: Page = () => {
 						<Flex justifyContent="space-between" alignItems="center">
 
 							<Box>
-								<Text.Body fontWeight="bolder" mt={0}>
+								<Text.Body fontWeight="bold" mt={0}>
 									Plats
 								</Text.Body>
 								<Text.Body2>
@@ -65,14 +65,14 @@ const Home: Page = () => {
 							</Box>
 
 							<Box>
-								<Text.Body2 fontWeight="bolder" >
+								<Text.Body2 fontWeight="bold" >
 									Telefon
 								</Text.Body2>
 								<Text.Body2>
-									070 - 753 79 53 <PhoneIcon ml=".5rem" fontSize="lg" />
+									070 - 753 79 53 <PhoneIcon ml=".5rem" fontSize="md" />
 								</Text.Body2>
 								<Text.Body2>
-									035 - 12 30 95 <PhoneIcon ml=".5rem" fontSize="lg" />
+									035 - 12 30 95 <PhoneIcon ml=".5rem" fontSize="md" />
 								</Text.Body2>
 							</Box>
 

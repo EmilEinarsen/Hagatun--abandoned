@@ -1,10 +1,10 @@
 const heading: StyleConfig = {
 	baseStyle: {
-		color: 'greyViolet.600'
+		color: 'violet.600'
 	},
 	variants: {
 		h1: {
-			fontSize: '6xl', 
+			fontSize: '3.5rem', 
 			fontWeight: 'bold', 
 			marginTop: '1.5rem',
 			lineHeight: '4.5rem',
