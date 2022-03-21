@@ -1,39 +1,44 @@
+import { AdressIcon } from './AdressIcon'
 import { ArrowForwardIcon } from './ArrowForwardIcon'
 import { CloseIcon } from './CloseIcon'
+import { ExternalLinkIcon } from './ExternalLinkIcon'
+import { FacebookIcon, FacebookIconMeta } from './media/FacebookIcon'
 import { HamburgerIcon } from './HamburgerIcon'
 import { LogoIcon } from './LogoIcon'
-import { SwedishFlagIcon } from './flags/SwedishFlagIcon'
-import { ExternalLinkIcon } from './ExternalLinkIcon'
-import { AdressIcon } from './AdressIcon'
 import { MailIcon } from './MailIcon'
-import { SearchIcon } from './SearchIcon'
 import { PhoneIcon } from './PhoneIcon'
+import { SearchIcon } from './SearchIcon'
 
 /*
 	Qol to easily import all icons
 	example usecase: dev-showcase
 */
 export const Icon = {
-	ArrowForward: ArrowForwardIcon,
-	Hamburger: HamburgerIcon,
-	Close: CloseIcon,
-	SwedishFlag: SwedishFlagIcon,
-	ExternalLink: ExternalLinkIcon,
 	Adress: AdressIcon,
+	ArrowForward: ArrowForwardIcon,
+	Close: CloseIcon,
+	ExternalLink: ExternalLinkIcon,
+	Facebook: FacebookIcon,
+	Hamburger: HamburgerIcon,
+	Logo: LogoIcon,
 	Mail: MailIcon,
-	Search: SearchIcon,
 	Phone: PhoneIcon,
+	Search: SearchIcon,
 }
 /*
 	All icons goes here
 */
 export {
-	LogoIcon,
+	AdressIcon,
 	ArrowForwardIcon,
-	HamburgerIcon,
 	CloseIcon,
-	SwedishFlagIcon,
 	ExternalLinkIcon,
+	HamburgerIcon,
+	LogoIcon,
+	MailIcon,
+	PhoneIcon,
+	SearchIcon,
+	FacebookIcon
 }
 
 /*
@@ -41,12 +46,12 @@ export {
 	example usecase: dev-showcase
 */
 export const Meta = {
-	// Example: ExampleMeta,
+	Facebook: FacebookIconMeta
 }
 
 /*
 	All meta goes here
 */
 export {
-	// ExampleMeta,
+	FacebookIconMeta
 }

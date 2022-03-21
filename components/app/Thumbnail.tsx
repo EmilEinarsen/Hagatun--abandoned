@@ -23,33 +23,29 @@ export const Thumbnail = ({
 	align,
 	childContainerProps,
 	...props
-}: React.PropsWithChildren<ThumbnailProps>) => {
-	const isMobile = useIsMobile()
-	return (
-		<AspectRatio ratio={ratio}>
-			<Box
-				d="flex"
-				borderRadius={50}
-				justifyContent={`${justify} !important`}
-				alignItems={`${align} !important`}
-				{...props}
+}: React.PropsWithChildren<ThumbnailProps>) => 
+	<AspectRatio ratio={ratio}>
+		<Box
+			d="flex"
+			borderRadius={50}
+			justifyContent={`${justify} !important`}
+			alignItems={`${align} !important`}
+			{...props}
+		>
+			<Image
+				src={src}
+				layout="fill"
+				alt={alt}
+				title={title} 
+				priority 
+			/>
+			<Box 
+				pos="absolute"
+				p={useIsMobile()?'5rem 1rem':'5rem'}
+				w="100%"
+				{...childContainerProps??null}
 			>
-				<Image
-					src={src}
-					layout="fill"
-					alt={alt}
-					title={title} 
-					priority 
-				/>
-				<Box 
-					pos="absolute"
-					p={isMobile?'5rem 1rem':'5rem'}
-					w="100%"
-					{...childContainerProps??null}
-				>
-					{children}
-				</Box>
+				{children}
 			</Box>
-		</AspectRatio>
-	)
-}
+		</Box>
+	</AspectRatio>

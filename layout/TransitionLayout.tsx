@@ -47,7 +47,7 @@ export function TransitionLayout({
 	}), [animate, exit, transitionDuration, transitionTimingFunction])
 
   const [current, setCurrent] = useState({ childKey: nextChildKey, children: nextChildren })
-	const [ isShow, { toggle: toggleStage } ] = useBoolean(!withInitial)
+	const [ shouldShow, { toggle: toggleStage } ] = useBoolean(!withInitial)
 
 	useMount(() => {
 		withInitial && toggleStage()
@@ -57,21 +57,17 @@ export function TransitionLayout({
     nextChildKey !== current.childKey && toggleStage()
   }, [current, nextChildKey, toggleStage])
 
-	const hotSwapChild = useCallback(() => {
-		if(isShow) return
-		setCurrent({ childKey: nextChildKey, children: nextChildren })
-		toggleStage()
-		window.scrollTo(0,0)
-	}, [isShow, nextChildKey, nextChildren, toggleStage])
-
   return (
 		<Component
 			{...props}
 			onTransitionEnd={() => {
-				hotSwapChild()
+				if(shouldShow) return
+				setCurrent({ childKey: nextChildKey, children: nextChildren })
+				toggleStage()
+				window.scrollTo(0,0)
 				props.onTransitionEnd?.()
 			}}
-			style={{ ...props.style, ...isShow ? show : hide }}
+			style={{ ...props.style, ...shouldShow ? show : hide }}
 		>
 			{current.children}
 		</Component>

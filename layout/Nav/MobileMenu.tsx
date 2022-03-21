@@ -8,13 +8,13 @@ import FocusLock from '@chakra-ui/focus-lock'
 import { Fade, Portal, VisuallyHidden } from '@chakra-ui/react'
 
 import { Link } from 'components/core/Link'
-import { CloseIcon, HamburgerIcon, LogoIcon } from 'components/icons'
+import { CloseIcon, HamburgerIcon } from 'components/icons'
 import { useMount } from 'hooks/useMount'
 import { useIsMobile } from 'hooks/useIsMobile'
 import { useDisableScroll } from 'hooks/useDisableScroll'
-import { Item } from './Menu'
-import { Heading } from 'components/core/Heading'
 import { SearchIcon } from 'components/icons/SearchIcon'
+import { CompanyLogo } from 'components/app/CompanyLogo'
+import { Item } from './Menu'
 
 
 /**
@@ -43,10 +43,7 @@ const MobileMenu = () => {
 				use this to style navigation since FocusLock doesn't have the props className or style 
 			*/}
 			<FocusLock finalFocusRef={btnRef} isDisabled={!isMenuOpen}>
-				<Link href="/" aria-label="Go to homepage" exact onClick={onCloseMenu} display="flex" alignItems="center">
-					<LogoIcon fontSize="6xl" color="#C3A94D" />
-					<Heading.Brand marginTop={0} marginLeft={2} fontSize="sm">HAGATUN REVISION</Heading.Brand>
-				</Link>
+				<CompanyLogo onClick={onCloseMenu} isSm />
 				<Box as="nav" className="nav" aria-label="Main">
 					<List className="nav__list" orientation="horizontal" alignItems="center">
 						<IconButton

@@ -1,10 +1,9 @@
 import { Box, List, ListItem } from '@chakra-ui/layout'
 import { Text, TextProps, IconButton, Button } from '@chakra-ui/react'
-import { Heading } from 'components/core/Heading'
+import { CompanyLogo } from 'components/app/CompanyLogo'
 
 import { Link } from 'components/core/Link'
 import { HamburgerIcon } from 'components/icons/HamburgerIcon'
-import { LogoIcon } from 'components/icons/LogoIcon'
 
 export const Item: React.FC<TextProps & { isDrawer?: boolean }> = ({ isDrawer, ...props }) => 
 	<ListItem>
@@ -23,10 +22,7 @@ export const Item: React.FC<TextProps & { isDrawer?: boolean }> = ({ isDrawer, .
  */
 export const Menu = () => 
 	<>
-		<Link href="/" aria-label="Go to homepage" exact display="flex" alignItems="center">
-			<LogoIcon fontSize="7xl" color="#C3A94D" />
-			<Heading.Brand marginLeft={2}>HAGATUN REVISION</Heading.Brand>
-		</Link>
+		<CompanyLogo />
 		<Box as="nav" className="nav" aria-label="Main" width="100%" maxW="700px">
 			<List className="nav__list" orientation="horizontal" alignItems="center" width="100%" justifyContent="space-between">
 				<Item className="d-not-mobile" as={props => <Link {...props} href="/news" exact>NYHETER</Link>} />
