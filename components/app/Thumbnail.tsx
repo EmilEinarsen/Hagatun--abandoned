@@ -1,6 +1,6 @@
 import Image from 'next/image'
-
 import { AspectRatio, Box, BoxProps } from "@chakra-ui/layout"
+
 import { useIsMobile } from 'hooks/useIsMobile'
 
 interface ThumbnailProps extends BoxProps {
@@ -22,9 +22,10 @@ export const Thumbnail = ({
 	justify,
 	align,
 	childContainerProps,
+	as,
 	...props
 }: React.PropsWithChildren<ThumbnailProps>) => 
-	<AspectRatio ratio={ratio}>
+	<AspectRatio ratio={ratio} as={as}>
 		<Box
 			d="flex"
 			borderRadius={50}
@@ -37,12 +38,12 @@ export const Thumbnail = ({
 				layout="fill"
 				alt={alt}
 				title={title} 
-				priority 
+				priority
+				objectFit="cover"
 			/>
 			<Box 
 				pos="absolute"
 				p={useIsMobile()?'5rem 1rem':'5rem'}
-				w="100%"
 				{...childContainerProps??null}
 			>
 				{children}

@@ -1,8 +1,9 @@
-import { VStack, WrapProps, Wrap, WrapItem, Box } from '@chakra-ui/react'
+import { VStack, WrapProps, Wrap, WrapItem, Box, Button } from '@chakra-ui/react'
+
 import { CompanyLogo } from 'components/app/CompanyLogo'
 import { Link } from 'components/core/Link'
 import { Text } from 'components/core/Text'
-import { FacebookIcon, FacebookIconMeta } from 'components/icons'
+import { FacebookIcon, FacebookIconMeta, MailIcon } from 'components/icons'
 
 const links = [
 	{ 
@@ -27,7 +28,7 @@ const links = [
 			{ text: 'Vi sponsrar', href: '' },
 		]
 	},
-]
+] as const
 
 export const Footer = (props: WrapProps) =>
 	<Wrap justify="space-between" textAlign="start" {...props}>
@@ -40,7 +41,7 @@ export const Footer = (props: WrapProps) =>
 			<Link isExternal href={FacebookIconMeta.url}><FacebookIcon fontSize="4xl" color="facebook.400" /></Link>
 		</WrapItem>
 		{links.map(groups => 
-			<WrapItem key={groups.title} as={VStack} maxW={250}>
+			<WrapItem key={groups.title} as={VStack} maxW={250} spacing="1.5rem">
 				<Text.Body fontWeight="bold" mt={0}>
 					{groups.title}
 				</Text.Body>
@@ -49,7 +50,7 @@ export const Footer = (props: WrapProps) =>
 				)}
 			</WrapItem>
 		)}
-		<WrapItem as={VStack} maxW={250}>
+		<WrapItem as={VStack} maxW={250} spacing="1.5rem">
 			<Text.Body fontWeight="bold" mt={0}>
 				Kontakta oss
 			</Text.Body>
@@ -65,6 +66,18 @@ export const Footer = (props: WrapProps) =>
 			<Box>				
 				<Text.Body2 mt={0}>Postadress:</Text.Body2>
 				<Text.Body2 mt={0}>Box 15, 312 21 Laholm</Text.Body2>
+			</Box>
+			<Box>
+				<Button
+					colorScheme="primary" 
+					variant="solid" 
+					size="md" 
+					leftIcon={<MailIcon fontSize="xl" />} 
+					iconSpacing="1rem"
+					p="2rem 1.5rem"
+				>
+					<Text.Body2 mt={0} color="inherit">info@hagatun.se</Text.Body2>
+				</Button>
 			</Box>
 		</WrapItem>
 	</Wrap>
