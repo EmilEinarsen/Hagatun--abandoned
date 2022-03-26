@@ -1,12 +1,13 @@
 import Head from "next/head"
 import { Box } from "@chakra-ui/react"
 
-import { Hero } from "components/app/Hero"
-import { References } from "components/app/References"
-import { Thumbnail } from "components/app/Thumbnail"
+import { Hero } from "layout/sections/Hero"
+import { References } from "layout/sections/References"
+import { Thumbnail } from "app/Thumbnail"
 import { Heading } from "components/core/Heading"
 import { Text } from "components/core/Text"
 import { Section } from "components/core/Section"
+import { Services } from "layout/sections/Services"
 
 const Home: Page = () =>
 	<>
@@ -14,6 +15,7 @@ const Home: Page = () =>
 			<title>About Me · Emil Einarsen</title>
 		</Head>
 		<Hero as={Section} />
+		<Services as={Section} />
 		<Thumbnail 
 			src="/stellrweb-djb1whucfBY-unsplash.jpg"
 			align="start"

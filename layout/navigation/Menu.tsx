@@ -1,6 +1,6 @@
 import { Box, List, ListItem } from '@chakra-ui/layout'
 import { Text, TextProps, IconButton, Button } from '@chakra-ui/react'
-import { CompanyLogo } from 'components/app/CompanyLogo'
+import { CompanyLogo } from 'app/CompanyLogo'
 
 import { Link } from 'components/core/Link'
 import { HamburgerIcon } from 'components/icons/HamburgerIcon'

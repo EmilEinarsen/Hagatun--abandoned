@@ -5,7 +5,7 @@ import { FrostBox } from 'components/core/FrostBox'
 import { Text } from 'components/core/Text'
 import { Heading } from 'components/core/Heading'
 import { AdressIcon, PhoneIcon, MailIcon } from 'components/icons'
-import { Thumbnail } from './Thumbnail'
+import { Thumbnail } from '../../app/Thumbnail'
 
 export const Hero= (props: BoxProps) =>
 	<>

@@ -1,6 +1,6 @@
 import { VStack, WrapProps, Wrap, WrapItem, Box, Button } from '@chakra-ui/react'
 
-import { CompanyLogo } from 'components/app/CompanyLogo'
+import { CompanyLogo } from 'app/CompanyLogo'
 import { Link } from 'components/core/Link'
 import { Text } from 'components/core/Text'
 import { FacebookIcon, FacebookIconMeta, MailIcon } from 'components/icons'

@@ -13,7 +13,7 @@ import { useMount } from 'hooks/useMount'
 import { useIsMobile } from 'hooks/useIsMobile'
 import { useDisableScroll } from 'hooks/useDisableScroll'
 import { SearchIcon } from 'components/icons/SearchIcon'
-import { CompanyLogo } from 'components/app/CompanyLogo'
+import { CompanyLogo } from 'app/CompanyLogo'
 import { Item } from './Menu'
 
 

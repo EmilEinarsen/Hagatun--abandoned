@@ -1,8 +1,8 @@
 import { Box } from '@chakra-ui/react'
 
-import { Nav } from "layout/Nav/Nav"
+import { Nav } from "layout/navigation/Nav"
 import { Page } from 'layout/Page'
-import { Footer } from 'layout/Footer/Footer'
+import { Footer } from 'layout/footer/Footer'
 
 interface LayoutProps { 
 	childKey: string 
