@@ -1,4 +1,7 @@
 const button: StyleConfig = {
+	baseStyle: {
+		fontWeight: 'regular'
+	},
 	variants: {
 		outline: {
 			borderWidth: 2,

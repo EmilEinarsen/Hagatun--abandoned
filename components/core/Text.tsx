@@ -5,7 +5,6 @@ interface Compound {
 	Body: React.ComponentType<Omit<TextProps, 'variant'>>
 	Body2: React.ComponentType<Omit<TextProps, 'variant'>>
 	Caption: React.ComponentType<Omit<TextProps, 'variant'>>
-	Blockquote: React.ComponentType<Omit<TextProps, 'variant'>>
 	Naked: React.ComponentType<Omit<TextProps, 'variant'>>
 }
 
@@ -14,6 +13,5 @@ export const Text = Object.assign(ChakraText, {
 	Body: props => <ChakraText {...props} />,
 	Body2: props => <ChakraText variant="body2" {...props} />,
 	Caption: props => <ChakraText variant="caption" {...props} />,
-	Blockquote: props => <ChakraText variant="blockquote" as="blockquote" {...props} />,
 	Naked: props => <ChakraText variant="naked" {...props} />,
 } as Compound)

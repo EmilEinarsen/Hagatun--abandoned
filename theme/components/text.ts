@@ -5,29 +5,25 @@ const text: StyleConfig = {
 	variants: {
 		subtitle: {
 			fontSize: 'xl', 
-			fontWeight: 'normal'
+			fontWeight: 'normal',
+			lineHeight: '2ch'
 		},
 		body: {
 			fontSize: 'lg', 
-			fontWeight: 'normal', 
-			marginTop: '1.5rem', 
-			lineHeight: '1.75rem'
+			fontWeight: 'normal',
+			lineHeight: '3ch'
 		},
 		body2: {
 			fontSize: 'md', 
 			fontWeight: 'normal',
-			lineHeight: '1.75rem'
+			lineHeight: '3ch'
 		},
 		caption: {
 			fontSize: '.875rem', 
 			fontWeight: 'medium', 
 			textTransform: 'uppercase', 
 			color: 'gray.700', 
-			letterSpacing: '.15rem', 
-			marginTop: '1rem'
-		},
-		blockquote: {
-			
+			letterSpacing: '.15rem'
 		},
 		naked: {
 			fontSize: 'lg', 

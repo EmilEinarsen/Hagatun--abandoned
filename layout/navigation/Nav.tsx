@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
 import { Box, BoxProps } from '@chakra-ui/react'
-import { useIsMobile } from 'hooks/useIsMobile'
+import { useIsTablet } from 'hooks/useIsTablet'
 import { Menu } from './Menu'
 
 const MobileMenu = dynamic(() => import('./MobileMenu'))
@@ -12,5 +12,5 @@ const MobileMenu = dynamic(() => import('./MobileMenu'))
  */
 export const Nav = (props: BoxProps) =>
 	<Box {...props}>
-		{!useIsMobile() ? <Menu /> : <MobileMenu />}
+		{!useIsTablet() ? <Menu /> : <MobileMenu />}
 	</Box>

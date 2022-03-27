@@ -19,7 +19,7 @@ export const References = (props: StackProps) =>
 	<VStack spacing="2rem" {...props}>
 		<Heading.H2>Referenser</Heading.H2>
 		<Text.Subtitle maxW={400} textAlign="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text.Subtitle>
-		<Wrap spacing="5rem" justify="space-between">
+		<Wrap spacing="5rem" justify="space-around">
 			<Reference 
 				src="/gimsteinn.png" 
 				alt="gimsteinn"

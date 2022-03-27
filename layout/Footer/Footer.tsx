@@ -31,7 +31,7 @@ const links = [
 ] as const
 
 export const Footer = (props: WrapProps) =>
-	<Wrap justify="space-between" textAlign="start" {...props}>
+	<Wrap justify="space-evenly" spacing="2.5rem" textAlign="start" {...props}>
 		<WrapItem as={VStack} maxW={400} spacing="2rem">
 			<CompanyLogo isSm />
 			<Text.Body>

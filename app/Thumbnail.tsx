@@ -1,16 +1,17 @@
 import Image from 'next/image'
-import { AspectRatio, Box, BoxProps } from "@chakra-ui/layout"
+import { AspectRatio, Box, BoxProps, StackProps } from "@chakra-ui/layout"
 
-import { useIsMobile } from 'hooks/useIsMobile'
+import { useIsTablet } from 'hooks/useIsTablet'
 
 interface ThumbnailProps extends BoxProps {
-	justify: 'start' | 'end' | 'center'
-	align: 'start' | 'end' | 'center'
 	src: string
 	alt: string
 	title: string
 	ratio?: number
-	childContainerProps?: BoxProps
+	aspectRatioProps?: BoxProps & {
+		flipRatio?: boolean
+	}
+	childContainerProps?: StackProps
 }
 
 export const Thumbnail = ({
@@ -19,34 +20,31 @@ export const Thumbnail = ({
 	ratio = 16/9,
 	alt,
 	title,
-	justify,
-	align,
+	aspectRatioProps: {
+		flipRatio,
+		...aspectRatioProps
+	} = {},
 	childContainerProps,
-	as,
 	...props
 }: React.PropsWithChildren<ThumbnailProps>) => 
-	<AspectRatio ratio={ratio} as={as}>
-		<Box
-			d="flex"
-			borderRadius={50}
-			justifyContent={`${justify} !important`}
-			alignItems={`${align} !important`}
-			{...props}
-		>
-			<Image
-				src={src}
-				layout="fill"
-				alt={alt}
-				title={title} 
-				priority
-				objectFit="cover"
-			/>
-			<Box 
-				pos="absolute"
-				p={useIsMobile()?'5rem 1rem':'5rem'}
-				{...childContainerProps??null}
-			>
-				{children}
+	<Box {...props}>
+		<AspectRatio ratio={useIsTablet()?2/6:ratio} {...aspectRatioProps}>
+			<Box borderRadius={50}>
+				<Image
+					src={src}
+					layout="fill"
+					alt={alt}
+					title={title} 
+					priority
+					objectFit="cover"
+				/>
+				<Box
+					pos="absolute"
+					p={useIsTablet()?'3.5rem 1rem':'4rem'}
+					{...childContainerProps??null}
+				>
+					{children}
+				</Box>
 			</Box>
-		</Box>
-	</AspectRatio>
+		</AspectRatio>
+	</Box>

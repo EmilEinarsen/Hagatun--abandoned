@@ -38,7 +38,7 @@ $border-width: 2px;
 .footer {
 	text-align: center;
 	margin-top: $page-content-gap;
-	max-height: $footer-height;
+	min-height: $footer-height;
 }
 
 .header__container, .main-navigation {

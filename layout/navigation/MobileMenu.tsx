@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from 'react'
-import clsx from 'clsx'
+import { useEffect, useRef } from 'react'
 
 import { IconButton } from '@chakra-ui/button'
 import { useDisclosure } from '@chakra-ui/hooks'
@@ -10,7 +9,7 @@ import { Fade, Portal, VisuallyHidden } from '@chakra-ui/react'
 import { Link } from 'components/core/Link'
 import { CloseIcon, HamburgerIcon } from 'components/icons'
 import { useMount } from 'hooks/useMount'
-import { useIsMobile } from 'hooks/useIsMobile'
+import { useIsTablet } from 'hooks/useIsTablet'
 import { useDisableScroll } from 'hooks/useDisableScroll'
 import { SearchIcon } from 'components/icons/SearchIcon'
 import { CompanyLogo } from 'app/CompanyLogo'
@@ -31,10 +30,10 @@ const MobileMenu = () => {
 	const { isOpen: isSearchOpen, onToggle: onToggleSearch, onClose: onCloseSearch } = useDisclosure()
 	const { isOpen: isVisuallyHidden, onOpen: onHide, onClose: onShow } = useDisclosure()
 
-	const isMobile = useIsMobile()
-	useEffect(() => { isMobile || onCloseMenu() }, [isMobile, onCloseMenu])
+	const isTablet = useIsTablet()
+	useEffect(() => { isTablet || onCloseMenu() }, [isTablet, onCloseMenu])
 
-	useDisableScroll({ enabled: isMobile && isMenuOpen })
+	useDisableScroll({ enabled: isTablet && isMenuOpen })
 	
 	return (
 		<>
